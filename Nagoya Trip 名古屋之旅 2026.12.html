@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Nagoya Trip 名古屋之旅 2026.12</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+:root{color-scheme:light;--bg:#fcf8f1;--paper:#fffdf9;--oat:#f1e6d5;--blue:#efc4b5;--brown:#b5643c;--ink:#3a2d24;--soft:#6b5848;--line:#eadfcc;--warn:#a85a36;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);height:100%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;font-weight:400;font-size:17px;line-height:1.8;letter-spacing:.02em}
+h1,h2,h3{font-family:inherit;font-weight:700}
+.wrap{max-width:780px;margin:0 auto;padding:0 18px}
+a{color:inherit}
+.hero{padding:44px 18px 26px;text-align:center;background:linear-gradient(#f8dfc6,#fcf8f1);border-radius:0 0 32px 32px}
+.hero small{letter-spacing:.3em;color:var(--soft);font-size:15px}
+.hero h1{font-size:34px;margin:10px 0 6px;line-height:1.3;letter-spacing:.08em}
+.hero p{margin:0;color:var(--soft);font-size:16px}
+.hero svg{width:100%;max-width:420px;height:auto;margin-top:16px}
+.count{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:16px;color:var(--soft)}
+.count .cl{width:100%;font-size:15px}
+.cb{min-width:64px;padding:8px 6px;border-radius:14px;background:var(--paper);border:1px solid var(--line);text-align:center;line-height:1.3;font-size:14px}
+.cb b{display:block;font-size:28px;color:var(--brown);font-variant-numeric:tabular-nums}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(252,248,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:10px 18px;scrollbar-width:none}
+nav a{white-space:nowrap;text-decoration:none;font-size:16px;padding:5px 15px;border-radius:99px;color:var(--soft)}
+nav a:hover{background:var(--oat);color:var(--ink)}
+section{padding:36px 0 6px}
+h2{font-size:24px;margin:0 0 10px;padding:12px 20px;border-radius:14px;letter-spacing:.06em;color:#fff8ee;background:#a85a36}
+
+h2::after{content:"❄";float:right;opacity:.6;font-size:20px}
+.grid.two .card:nth-child(1){border-top:5px solid #d89a3a}.grid.two .card:nth-child(2){border-top:5px solid #c9714f}
+.stay{align-items:center}.stay span{color:#3a2d24;font-size:15px;font-weight:500;padding:3px 13px;border-radius:99px;background:#efe6da;border:1px solid var(--line)}
+.stay:nth-child(1) span{background:#fbeccb}.stay:nth-child(2) span{background:#f8e1d8}.stay:nth-child(3) span{background:#f6e6d2}.stay:nth-child(4) span{background:#eeeed2}.stay:nth-child(5) span{background:#efe6da}
+.ill{display:block;width:100%;max-width:420px;height:auto;margin:16px auto 0}
+.day{border-left:6px solid var(--c,#9a9ab0)}
+.day>summary{background:var(--bgc,#2f2f3d)}
+.day .date b{color:var(--c)}
+.day[data-r="0"]{--c:#6b5a4c;--bgc:#efe6da}.day[data-r="1"]{--c:#94600f;--bgc:#fbeccb}.day[data-r="2"]{--c:#a04a35;--bgc:#f8e1d8}.day[data-r="3"]{--c:#8a5428;--bgc:#f6e6d2}.day[data-r="4"]{--c:#5e6228;--bgc:#eeeed2}
+h2+.sub{margin:0 0 16px;color:var(--soft);font-size:15px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:12px}
+.flag{border-left:3px solid var(--warn)}
+.flag b{color:var(--warn)}
+.flag ol{margin:8px 0 0;padding-left:22px;font-size:16.5px}
+.flag li{margin-bottom:10px}
+.flight{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;text-align:center}
+.flight .t{font-size:30px;font-weight:700}
+.flight .l{font-size:15px;color:var(--soft);line-height:1.5}
+.flight .ar{color:var(--brown);font-size:14px}
+.fh{font-size:15px;color:var(--soft);margin-bottom:10px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chips button{font:inherit;font-size:15px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:5px 14px;border-radius:99px;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--brown);border-color:var(--brown);color:#fff;font-weight:700}
+.day{padding:0;overflow:hidden}
+.day>summary{list-style:none;display:flex;gap:14px;align-items:center;padding:14px 16px;cursor:pointer}
+.day>summary::-webkit-details-marker{display:none}
+.date{min-width:58px;text-align:center;border-right:1px solid var(--line);padding-right:12px}
+.date b{display:block;font-size:30px;line-height:1.1;color:var(--brown)}
+.date span{font-size:13px;color:var(--soft)}
+.sum{flex:1;min-width:0}
+.sum .ti{font-size:18px;font-weight:700;line-height:1.45}
+.tag{display:inline-block;font-size:13px;padding:0 10px;border-radius:99px;margin-right:6px;background:var(--oat);color:var(--ink)}
+.r0{background:#e6d9c8}.r1{background:#f3d99b}.r2{background:#efc4b5}.r3{background:#ecd0ad}.r4{background:#d9dbae}
+.sum .st{font-size:14.5px;color:var(--soft);line-height:1.6;margin-top:2px}
+.day[open]>summary{border-bottom:1px dashed var(--line)}
+.today{box-shadow:0 0 0 2px var(--brown)}
+.body{padding:14px 18px 18px}
+.step{display:flex;gap:12px;padding:7px 0;font-size:16.5px;line-height:1.6}
+.step i{font-style:normal;flex:none;width:54px;font-size:13px;text-align:center;color:var(--soft);border:1px solid var(--line);border-radius:99px;height:24px;line-height:22px;margin-top:2px}
+.warn{font-size:15.5px;color:var(--warn);margin:8px 0 0}
+.fields{margin-top:12px;display:grid;gap:10px}
+.fields label{font-size:14px;color:var(--soft)}
+.fields input,.fields textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px 11px}
+.maps{margin-top:12px;font-size:15.5px}
+.maps a{color:var(--brown)}
+.grid{display:grid;gap:12px}
+@media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}.hero h1{font-size:42px}body{font-size:18px}}
+.stay{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:16.5px;line-height:1.55}
+.stay:last-child{border:0}
+.stay span{color:var(--brown);font-size:14.5px;white-space:nowrap}
+.check label{display:flex;gap:12px;padding:7px 0;font-size:16.5px;cursor:pointer}
+.check input{accent-color:var(--brown);width:20px;height:20px;flex:none;margin-top:4px}
+footer{text-align:center;color:var(--soft);font-size:14px;padding:40px 0 50px}
+.nb{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--oat);font-size:16px}
+.nb b{display:block;margin-bottom:2px;color:var(--brown)}
+.nb ul,.tl{margin:0;padding-left:20px}
+.nb li{margin:5px 0;line-height:1.6}
+.tl li{margin:8px 0;font-size:16.5px;line-height:1.65}
+.leg h3{margin:0 0 2px;font-size:18px}
+.leg .when{color:var(--brown);font-size:14px;font-weight:700}
+.leg p{margin:6px 0 0;font-size:16px;line-height:1.65}
+.leg .tk{color:var(--soft)}
+</style>
+</head>
+<body>
+<header class="wrap hero">
+  <small>2026.12.17 — 12.31</small>
+  <h1>Nagoya Trip<br>名古屋之旅</h1>
+  <p>松本 Matsumoto · 奈良井 Narai-juku · 马笼 Magome-juku · 名古屋 Nagoya<br>十五天十四晚</p>
+  <svg class="ill" viewBox="0 0 420 150" aria-hidden="true"><defs>
+<g id="fir"><path d="M0-48L-11-28H11z" fill="#6a8458"/><path d="M0-38L-15-14H15z" fill="#5e7a4f"/><path d="M0-26L-19 0H19z" fill="#53703f"/><path d="M0-48L-5-38L0-40L5-38zM0-38L-7-26L0-28L7-26zM0-26L-9-12L0-15L9-12z" fill="#fff"/><rect x="-3" y="0" width="6" height="5" fill="#7a5a3a"/></g>
+<g id="cabin"><rect x="13" y="-44" width="7" height="14" fill="#8a6a5a"/><path d="M-26-22h52V0h-52z" fill="#c9a27a"/><path d="M-32-20L0-46L32-20z" fill="#8a5a3b"/><path d="M-27-21L0-43L27-21L21-21L0-37L-21-21z" fill="#fff"/><rect x="-6" y="-14" width="10" height="14" fill="#6b4a30"/><rect x="9" y="-17" width="10" height="9" fill="#fbe3a0"/><path d="M-26-11h52M-26-4h52" stroke="#a9825a" stroke-width="1"/></g>
+<g id="hiker"><path d="M-3-12L-6 0M3-12L6 0" stroke="#4a3b2e" stroke-width="3" stroke-linecap="round"/><rect x="-5" y="-28" width="10" height="16" rx="4" fill="#c9794a"/><rect x="-11" y="-27" width="7" height="13" rx="3" fill="#e0b04a"/><circle cx="0" cy="-34" r="5" fill="#f0cfae"/><path d="M-5.5-35a5.5 5.5 0 0111 0z" fill="#d05a4a"/><path d="M4-24L10-21" stroke="#c9794a" stroke-width="3" stroke-linecap="round"/><path d="M10-24L15 0" stroke="#8a6a4a" stroke-width="1.6"/></g>
+<g id="duck"><circle cx="0" cy="-13" r="13" fill="#fff" stroke="#e2cdb6" stroke-width="1.5"/><circle cx="9" cy="-28" r="8" fill="#fff" stroke="#e2cdb6" stroke-width="1.5"/><path d="M16-28l9 3-9 3z" fill="#f2a03d"/><circle cx="11" cy="-30" r="1.5" fill="#3a3028"/><path d="M-3-12q8 6 14-2" fill="none" stroke="#e2cdb6" stroke-width="1.5"/><path d="M1-21q8 2 15-3v4q-8 6-15 4z" fill="#d05a4a"/></g>
+</defs>
+<circle cx="350" cy="26" r="12" fill="#fbe3b0"/><path d="M-10 130L90 46l90 84z" fill="#ecd0b8"/><path d="M90 46L72 68l12-4 8 10 10-11 8 5z" fill="#fff"/><path d="M130 130L235 30l105 100z" fill="#dcae8f"/><path d="M235 30l-24 28 14-5 11 13 11-13 14 5z" fill="#fff"/>
+<rect y="126" width="420" height="24" rx="10" fill="#fff"/>
+<g fill="#d9b79c" font-size="14"><text x="22" y="26">&#10052;</text><text x="150" y="16">&#10053;</text><text x="290" y="34">&#10054;</text><text x="392" y="64">&#10052;</text></g>
+<use href="#fir" transform="translate(26 132)"/><use href="#fir" transform="translate(54 132) scale(.75)"/><use href="#hiker" transform="translate(104 132) scale(1.1)"/><use href="#cabin" transform="translate(190 132) scale(1.15)"/><use href="#fir" transform="translate(262 132) scale(1.1)"/><use href="#duck" transform="translate(322 132) scale(1.15)"/><use href="#fir" transform="translate(378 132) scale(.9)"/><use href="#fir" transform="translate(402 132) scale(.6)"/></svg>
+  <div class="count" id="count"></div>
+</header>
+<nav><div class="wrap"><a href="#flight">航班</a><a href="#days">每日行程</a><a href="#transport">交通车票</a><a href="#stay">住宿</a><a href="#hike">步道</a><a href="#list">清单</a></div></nav>
+<main class="wrap">
+<section id="flight">
+  <h2>航班</h2><p class="sub">新加坡航空 Singapore Airlines · Boeing 787-10 · 经济舱</p>
+  <div class="card"><div class="fh">去程　SQ 672　17 Dec (Thu)</div>
+    <div class="flight"><div><div class="t">01:20</div><div class="l">新加坡樟宜 Singapore Changi<br>T2</div></div><div class="ar">— ✈ —</div><div><div class="t">08:30</div><div class="l">名古屋中部国际机场<br>Chubu Centrair Intl T1</div></div></div></div>
+  <div class="card"><div class="fh">回程　SQ 671　31 Dec (Thu)</div>
+    <div class="flight"><div><div class="t">10:20</div><div class="l">名古屋中部国际机场<br>Chubu Centrair Intl T1</div></div><div class="ar">— ✈ —</div><div><div class="t">16:15</div><div class="l">新加坡樟宜<br>Singapore Changi</div></div></div></div>
+</section>
+
+<section id="days">
+  <h2>每日行程</h2><p class="sub">点开每一天查看详情，餐厅与笔记会保存在这台设备。</p>
+  <div class="chips" id="chips"></div>
+  <div id="daylist"></div>
+</section>
+
+<section id="transport">
+  <h2>交通与车票</h2><p class="sub">全程搭乘公共交通 · 时间与费用整理自公开资料，各来源略有出入，仅供参考，出发前请再核对</p>
+  <div class="card">
+    <h3 style="margin:0 0 8px;font-size:19px">需要先准备或到站购买</h3>
+    <ul class="tl">
+      <li><b>12/17 抵达当天：</b>名铁机场线车票；若搭 μ-SKY 特急需另买 μ-ticket（各来源约 ¥360–450）。再到 JR 名古屋站售票处买“信浓号 Wide View Shinano”指定席。我没能确认可否网上预订，抵达时现场买最稳妥。</li>
+      <li><b>12/24、12/27：</b>特急信浓号需要特急券，可在车站购买。</li>
+      <li><b>IC 卡：</b>备一张（Suica、ICOCA、Manaca 等），名古屋地铁与市区巴士可用。木曾谷巴士（中津川–马笼等）以及奈良井、薮原、木曾福岛等小站<b>不能刷 IC</b>，请备足硬币现金。</li>
+      <li><b>时刻表：</b>木曾谷班次少，出发前用 Google Maps 或 Navitime 查，巴士另看北恵那交通 Kitaena Kotsu 官网的冬季时刻。</li>
+      <li><b>通票：</b>路线以单程票为主，我没有找到明显划算的通票，想比较可自行用 JR Pass 计算器核算。</li>
+    </ul>
+  </div>
+  <div id="legs"></div>
+  <div class="card flag"><b>年末提醒</b><p style="margin:6px 0 0;font-size:16px">名古屋城官网显示 12/29–1/1 停车场关闭、导览停开；日本许多景点 12/29 起进入年末休馆，请先查营业日。行李转送（马笼 ⇄ 妻笼）的冬季运营说法互相矛盾，可询问马笼观光案内所 +81 573-69-2336。</p></div>
+</section>
+
+<section id="stay">
+  <h2>住宿</h2><p class="sub">共 14 晚</p>
+  <div class="card" id="staylist"></div>
+  <svg class="ill" viewBox="0 0 240 70" aria-hidden="true"><rect y="62" width="240" height="8" rx="4" fill="#fff" stroke="#e0d4bb"/><use href="#fir" transform="translate(40 62)"/><use href="#cabin" transform="translate(112 62)"/><use href="#fir" transform="translate(184 62) scale(.8)"/><use href="#fir" transform="translate(210 62) scale(.55)"/></svg>
+</section>
+
+<section id="hike">
+  <h2>步道信息</h2><p class="sub">摘自你的简报备注</p>
+  <div class="grid two">
+    <div class="card"><h3 style="margin:0 0 6px;font-size:19px">奈良井 Narai-juku → 薮原 Yabuhara（进阶）</h3><p style="margin:0">更硬派的路线。从 JR 奈良井站出发，走到主街尽头，过红色鸟居后继续向上，找到“鸟居峠 Torii Pass”指示牌即为起点。全程约 7 公里，近千米垂直爬升。部分路段是仅容一人通过的悬崖窄道，新手建议结伴。</p></div>
+    <div class="card"><h3 style="margin:0 0 6px;font-size:19px">马笼宿 Magome-juku ↔ 妻笼宿 Tsumago-juku（经典）</h3><p style="margin:0">中山道上最经典的步道之一。建议由马笼走向妻笼，大部分是下坡。全程约 7–9 公里，耗时 2–3 小时，路况成熟、指示牌清晰，基本不会走错。</p></div>
+  </div>
+  <svg class="ill" viewBox="0 0 240 70" aria-hidden="true"><rect y="62" width="240" height="8" rx="4" fill="#fff" stroke="#e0d4bb"/><use href="#fir" transform="translate(34 62)"/><use href="#hiker" transform="translate(88 62)"/><use href="#fir" transform="translate(140 62) scale(1.1)"/><use href="#hiker" transform="translate(190 62) scale(.9)"/></svg>
+</section>
+
+<section id="list">
+  <h2>出发前清单</h2><p class="sub">可自行勾选，进度会保存</p>
+  <div class="card check" id="check"></div>
+</section>
+</main>
+<footer><svg class="ill" style="max-width:90px;margin:0 auto 8px" viewBox="0 0 60 44" aria-hidden="true"><rect x="4" y="38" width="52" height="6" rx="3" fill="#fff" stroke="#e0d4bb"/><use href="#duck" transform="translate(28 40)"/></svg>良い旅を · 资料以行程简报为准</footer>
+
+<script>
+var H1='松本 Tabino Hotel lit Matsumoto',H2='奈良井 Matsumuraya Koma',H3='马笼 Magome Chaya',H4='名古屋 KOKO HOTEL Nagoya Sakae South',H5='东横INN Toyoko Inn Chubu International Airport No.1';
+var D=[
+{d:17,w:'四',r:1,t:'抵达日本，前往松本 Matsumoto',s:H1,st:[['航班','SQ672 新加坡 SIN 01:20 → 名古屋 NGO 08:30'],['电车','中部国际机场 Chubu Centrair Airport → 松本 Matsumoto'],['住宿',H1]],m:'Tabino Hotel lit Matsumoto'},
+{d:18,w:'五',r:1,t:'松本城 Matsumoto Castle 与老街',s:H1,st:[['步行','松本城 Matsumoto Castle ｜ 绳手通 Nawate-dori ｜ 中町街 Nakamachi Street'],['住宿','回 '+H1]],w2:'松本城冬季灯光投影约 18:00–22:00，开始日期待确认。',m:'Matsumoto Castle'},
+{d:19,w:'六',r:1,t:'大王山葵农场 Daio Wasabi Farm',s:H1,st:[['电车','从松本出发，约 1 小时'],['景点','大王山葵农场 Daio Wasabi Farm'],['住宿','回 '+H1]],m:'Daio Wasabi Farm'},
+{d:20,w:'日',r:1,t:'松本城市阿尔卑斯公园 Matsumoto City Alps Park',s:H1,st:[['景点','松本城市阿尔卑斯公园 Matsumoto City Alps Park'],['住宿','回 '+H1]],m:'Matsumoto City Alps Park'},
+{d:21,w:'一',r:2,t:'移动至奈良井宿 Narai-juku',s:H2,st:[['电车','松本 Matsumoto → 奈良井 Narai-juku，约 1 小时'],['住宿',H2]],m:'Narai-juku'},
+{d:22,w:'二',r:2,t:'奈良井 → 薮原 Yabuhara 徒步',s:H2,st:[['步行','奈良井 Narai-juku → 薮原 Yabuhara（进阶山野徒步）'],['住宿','回 '+H2]],w2:'进阶路线，冬季路况请确认。',m:'Narai-juku'},
+{d:23,w:'三',r:2,t:'奈良井宿 Narai-juku',s:H2,st:[['住宿',H2+'（简报未列其他安排）']],w2:'未列景点，请确认是否留白。',m:'Narai-juku'},
+{d:24,w:'四',r:3,t:'前往马笼宿 Magome-juku',s:H3,st:[['电车','奈良井 Narai-juku → 马笼宿 Magome-juku，约 2.5 小时'],['住宿',H3]],m:'Magome-juku'},
+{d:25,w:'五',r:3,t:'妻笼宿 Tsumago-juku → 马笼宿',s:H3,st:[['步行','妻笼宿 Tsumago-juku → 马笼宿 Magome-juku'],['住宿','回 '+H3]],w2:'简报备注建议方向为马笼 → 妻笼，请确认。',m:'Tsumago-juku'},
+{d:26,w:'六',r:3,t:'马笼宿 Magome-juku',s:H3,st:[['住宿',H3+'（简报未列其他安排）']],w2:'未列景点，请确认是否留白。',m:'Magome-juku'},
+{d:27,w:'日',r:4,t:'移动至名古屋 Nagoya',s:H4,st:[['电车','马笼宿 Magome-juku → 名古屋 Nagoya，约 2 小时'],['住宿',H4]],m:'KOKO HOTEL Nagoya Sakae South'},
+{d:28,w:'一',r:4,t:'City Walk · 宝可梦中心 Pokémon Center',s:H4,st:[['步行','City Walk'],['景点','宝可梦中心 Pokémon Center'],['住宿',H4]],w2:'City Walk 内容简报未列明。',m:'Pokémon Center Nagoya'},
+{d:29,w:'二',r:4,t:'名古屋 Nagoya',s:H4,st:[['住宿',H4+'（简报未列其他安排）']],w2:'未列景点，请确认是否留白。',m:'Nagoya Sakae'},
+{d:30,w:'三',r:0,t:'前往机场住宿',s:H5,st:[['移动','名古屋 Nagoya → 中部国际机场 Chubu Centrair Airport'],['住宿',H5]],m:'Toyoko Inn Chubu International Airport No.1'},
+{d:31,w:'四',r:0,t:'返回新加坡 Singapore',s:'中部国际机场 Chubu Centrair Airport T1',st:[['航班','SQ671 名古屋 NGO T1 10:20 → 新加坡 SIN 16:15']],m:'Chubu Centrair International Airport'}
+];
+var NB={
+17:['安顿好后，松本站步行约 15 分钟可到松本城 Matsumoto Castle；灯光投影若已开始可顺路看夜景'],
+18:['旧开智学校 Kyu-Kaichi School（松本城附近的明治时代校舍）','松本市美术馆 Matsumoto City Museum of Art（草间弥生作品）','晚上：松本城灯光投影与沿街灯饰约 18:00–22:00；往年约 12 月中旬开跑，今年起始日请确认','以上开放日与年末休馆请先查'],
+19:['穗高站 Hotaka Station 周边：穗高神社 Hotaka Shrine、碌山美术馆 Rokuzan Art Museum（步行可到，营业时间请确认）','大王山葵农场冬季约 09:00–16:30，全年无休，免门票；可尝山葵冰淇淋与山葵小吃'],
+20:['傍晚回松本站附近，若 12/18 当晚灯光尚未开始，可补看松本城夜景','松本市美术馆 Matsumoto City Museum of Art（若 12/18 没排到）'],
+21:['奈良井宿 Narai-juku 主街约 1 公里长，江户时代町家并列','中村邸 Nakamura Residence（保存下来的町家，冬季开放请确认）','木曾大桥 Kiso-no-Ohashi（奈良井川上的大型木桥）'],
+22:['薮原 Yabuhara 以お六櫛 Oroku-gushi 梳子闻名','奈良井宿外的杉木林道旁有 200 多尊地藏像 Jizo statues'],
+23:['木曾平泽 Kiso-Hirasawa（漆器之町，搭 JR 往松本方向约 2 站）','木曾福岛 Kiso-Fukushima（福岛关所 Fukushima Checkpoint 遗迹与资料馆，往马笼方向 JR 约 3 站）','备用：若 12/22 因积雪取消徒步，可挪到这天（仅建议，请自行决定）'],
+24:['在中津川 Nakatsugawa 等巴士约 30–60 分钟时，可在站前逛逛；中津川以栗子点心 栗きんとん Kurikinton 闻名','抵达马笼后沿石板坡道慢逛，留意日落早与巴士末班'],
+25:['妻笼宿 Tsumago-juku：寺下 Terashita 町家街与保存街景','妻笼–马笼步道上的男泷女泷 Odaki and Medaki Waterfalls','岛崎藤村纪念馆 Toson Memorial Museum（马笼，约 ¥500）；马笼脇本阵史料馆 12/15 起至 2 月休馆'],
+26:['马笼宿 Magome-juku 石板街与名物五平饼 Goheimochi','天气好时从马笼峠方向眺望恵那山 Mt. Ena'],
+27:['名古屋城 Nagoya Castle 可排在 12/27 或 12/28；官网显示 12/29–1/1 停车场关闭、12/29–1/4 停开导览，年末休馆请确认'],
+28:['宝可梦中心 Pokémon Center Nagoya 2024 年已搬到名古屋 PARCO 东馆 2F（荣 Sakae），旧资料写的松坂屋 5F 已不适用','绿洲21 Oasis 21、久屋大通公园 Hisaya-odori Park（荣站周边）','大须观音 Osu Kannon 与大须商店街 Osu Shopping Street','名古屋美食：味噌猪排 Miso Katsu、鳗鱼饭 Hitsumabushi、鸡翅 Tebasaki、小仓吐司 Ogura Toast'],
+29:['名古屋城年末休馆，不建议排这天','热田神宫 Atsuta Shrine；则武之森 Noritake Garden（名古屋站步行可到）'],
+30:['中部国际机场 Chubu Centrair Airport：Flight of Dreams（波音 787 主题馆）、观景台、机场温泉 Fusou no Yu，营业时间请确认'],
+31:['预留较长时间办理登机；机场内可买伴手礼']
+};
+var LEG=[
+['12/17','中部国际机场 Chubu Centrair Airport → 松本 Matsumoto','名铁机场线到名铁名古屋 Meitetsu Nagoya（μ-SKY 约 28 分钟，特急约 37 分钟）→ 步行转 JR 名古屋 → 特急信浓号 Wide View Shinano → 松本，约 2 小时 10 分–2 小时 30 分。信浓号约每小时一班，名古屋整点发车。','名铁约 ¥900–1,250，μ-SKY 另加 μ-ticket；名古屋→松本特急约 ¥5,600–6,000。'],
+['12/19','松本 Matsumoto ⇄ 穗高 Hotaka（大王山葵农场）','JR 大糸线 Oito Line 松本→穗高约 30 分钟，每小时 1–2 班；穗高站到农场搭出租车约 10 分钟。冬季没有巴士和租借脚踏车，回程可请农场服务处帮忙叫车。','电车约 ¥330–350；出租车单程约 ¥1,500–2,000。'],
+['12/21','松本 Matsumoto → 奈良井 Narai-juku','JR 中央本线普通车约 50–60 分钟，特急信浓号不停奈良井。班次少，先查时刻表。','奈良井是小站，IC 卡不一定能刷，建议备现金或在松本买好车票。'],
+['12/22','奈良井 → 薮原 Yabuhara 徒步，搭车回奈良井','徒步终点薮原站搭 JR 普通车回奈良井，约 1 站，班次少，先确认末班。','冬季鸟居峠 Torii Pass 可能积雪结冰，请留意天气与日落时间。'],
+['12/24','奈良井 → 马笼 Magome-juku（约 2.5 小时）','JR 普通车到木曾福岛 Kiso-Fukushima → 特急信浓号到中津川 Nakatsugawa（约 35–50 分钟）→ 北恵那交通巴士 3 号站台到马笼，约 25–30 分钟。','特急需特急券；巴士约 ¥600–800，只收现金；巴士约每小时一班，末班约 17:00–18:15，请核对冬季时刻。'],
+['12/25','马笼 Magome ⇄ 妻笼 Tsumago','马笼到妻笼有直达巴士但班次很少，约 25 分钟；也可步行 8–9 公里、约 2.5–3 小时。简报排的是妻笼→马笼，需要先搭巴士去妻笼。','旧资料写最后一班妻笼→马笼约 16:42，冬季日落约 16:30，请核对现行时刻。'],
+['12/27','马笼 Magome-juku → 名古屋 Nagoya','巴士马笼→中津川 → JR 特急信浓号 → 名古屋，约 50–75 分钟 → 地铁东山线名古屋→荣 Sakae，约 5 分钟。','巴士现金；信浓号中津川→名古屋约 ¥2,900–3,000；地铁可用 IC。'],
+['12/28–29','名古屋市内 Nagoya','地铁与市区巴士为主，荣站周边多数可步行。','IC 卡可用。'],
+['12/30','名古屋 → 中部国际机场','地铁到名铁名古屋 → 名铁机场线约 28–37 分钟，酒店在机场附近。','费用同 12/17。'],
+['12/31','东横INN → 机场 T1','SQ671 10:20 起飞，建议预留较长的办理登机时间。','']
+];
+var R={0:'机场 Airport',1:'松本 Matsumoto',2:'奈良井 Narai-juku',3:'马笼 Magome-juku',4:'名古屋 Nagoya'};
+var S={g:function(k,f){try{var v=localStorage.getItem(k);return v==null?f:JSON.parse(v)}catch(e){return f}},s:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+var store=S.g('trip',{}),filter='all';
+function save(){S.s('trip',store)}
+function esc(x){return String(x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){
+  var now=new Date(),h='';
+  D.forEach(function(x){
+    if(filter!=='all'&&String(x.r)!==filter)return;
+    var iso=new Date(2026,11,x.d),isT=now.toDateString()===iso.toDateString(),o=store['d'+x.d]||{};
+    h+='<details class="card day'+(isT?' today':'')+'" data-r="'+x.r+'" id="d'+x.d+'"'+(isT?' open':'')+'><summary><div class="date"><b>'+x.d+'</b><span>12月 · 周'+x.w+'</span></div><div class="sum"><div class="ti">'+esc(x.t)+'</div><div class="st"><span class="tag r'+x.r+'">'+R[x.r]+'</span>'+esc(x.s)+'</div></div></summary><div class="body">';
+    x.st.forEach(function(s){h+='<div class="step"><i>'+s[0]+'</i><div>'+esc(s[1])+'</div></div>'});
+    if(x.w2)h+='<p class="warn">待确认：'+esc(x.w2)+'</p>';
+    if(NB[x.d])h+='<div class="nb"><b>顺路可去</b><ul>'+NB[x.d].map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ul></div>';
+    h+='<div class="fields"><label>餐厅（待填）<input data-k="d'+x.d+'" data-f="food" value="'+esc(o.food||'')+'" placeholder="例如：午餐／晚餐"></label><label>笔记<textarea rows="2" data-k="d'+x.d+'" data-f="note" placeholder="预约、提醒、心得…">'+esc(o.note||'')+'</textarea></label></div>';
+    h+='<div class="maps"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(x.m)+'">在地图打开 →</a></div></div></details>';
+  });
+  document.getElementById('daylist').innerHTML=h;
+}
+document.addEventListener('input',function(e){var t=e.target;if(t.dataset&&t.dataset.k){var o=store[t.dataset.k]||(store[t.dataset.k]={});o[t.dataset.f]=t.value;save()}});
+var c='<button aria-pressed="true" data-f="all">全部</button>';
+Object.keys(R).forEach(function(k){c+='<button aria-pressed="false" data-f="'+k+'">'+R[k]+'</button>'});
+document.getElementById('chips').innerHTML=c;
+document.getElementById('chips').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;filter=b.dataset.f;[].forEach.call(this.children,function(x){x.setAttribute('aria-pressed',x===b)});render()});
+var st=[['12/17 – 12/20',H1+'（4 晚）'],['12/21 – 12/23',H2+'（3 晚）'],['12/24 – 12/26',H3+'（3 晚）'],['12/27 – 12/29',H4+'（3 晚）'],['12/30',H5+'（1 晚）']];
+document.getElementById('staylist').innerHTML=st.map(function(s){return '<div class="stay"><div>'+s[1]+'</div><span>'+s[0]+'</span></div>'}).join('');
+document.getElementById('legs').innerHTML=LEG.map(function(l){return '<div class="card leg"><div class="when">'+l[0]+'</div><h3>'+esc(l[1])+'</h3><p>'+esc(l[2])+'</p>'+(l[3]?'<p class="tk">票价与提醒：'+esc(l[3])+'</p>':'')+'</div>'}).join('');
+var cl=['护照与电子机票','住宿确认信','保暖衣物与防滑鞋','步道用品（防水外套、手套）','交通票券／IC 卡','旅游保险','网络／eSIM','药品与常备用品'],cs=S.g('check',{});
+document.getElementById('check').innerHTML=cl.map(function(x,i){return '<label><input type="checkbox" data-c="'+i+'"'+(cs[i]?' checked':'')+'>'+x+'</label>'}).join('');
+document.getElementById('check').addEventListener('change',function(e){cs[e.target.dataset.c]=e.target.checked;S.s('check',cs)});
+var a=new Date('2026-12-17T01:20:00+08:00'),e=new Date('2026-12-31T16:15:00+08:00');
+function box(v,u){return '<span class="cb"><b>'+String(v).padStart(2,'0')+'</b>'+u+'</span>'}
+function tick(){var n=new Date(),df=a-n,el=document.getElementById('count');
+if(df>0){var t=Math.floor(df/1000);el.innerHTML='<span class="cl">距离起飞还有</span>'+box(Math.floor(t/86400),'天')+box(Math.floor(t%86400/3600),'时')+box(Math.floor(t%3600/60),'分')+box(t%60,'秒')}
+else{el.textContent=n<e?'旅行进行中':'旅程已结束'}}
+tick();setInterval(tick,1000);
+render();
+</script>
+</body>
+</html>
